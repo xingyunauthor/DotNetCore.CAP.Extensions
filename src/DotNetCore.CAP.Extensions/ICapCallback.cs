@@ -1,6 +1,6 @@
 namespace DotNetCore.CAP.Extensions
 {
-    public interface ICapCallback<T> where T : class
+    public interface IEventCallback<T> where T : class
     {
         
     }

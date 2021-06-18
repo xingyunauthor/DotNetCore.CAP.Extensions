@@ -15,7 +15,7 @@ namespace DotNetCore.CAP.Extensions
         }
     }
 
-    public class DistributedEventHandler<T, T1> where T : ICapCallback<T1> 
+    public class DistributedEventHandler<T, T1> where T : IEventCallback<T1> 
         where T1 : class
     {
         public virtual Task<T1> HandleEventAsync(T eventData)

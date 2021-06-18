@@ -14,6 +14,10 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{AEAE9AB2-F96B-4075-A55C-47E8E2F8E333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.WebApi", "samples\Sample.WebApi\Sample.WebApi.csproj", "{64D38A97-DF33-4E46-9812-25BAF133520D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EC0CF35F-725F-45E3-AAD3-67ABEC5E8E84} = {3406788C-85B7-4083-B155-7F211BC34B6A}
+		{64D38A97-DF33-4E46-9812-25BAF133520D} = {AEAE9AB2-F96B-4075-A55C-47E8E2F8E333}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EC0CF35F-725F-45E3-AAD3-67ABEC5E8E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +47,17 @@ Global
 		{EC0CF35F-725F-45E3-AAD3-67ABEC5E8E84}.Release|x64.Build.0 = Release|Any CPU
 		{EC0CF35F-725F-45E3-AAD3-67ABEC5E8E84}.Release|x86.ActiveCfg = Release|Any CPU
 		{EC0CF35F-725F-45E3-AAD3-67ABEC5E8E84}.Release|x86.Build.0 = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|x64.Build.0 = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Debug|x86.Build.0 = Debug|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|x64.ActiveCfg = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|x64.Build.0 = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|x86.ActiveCfg = Release|Any CPU
+		{64D38A97-DF33-4E46-9812-25BAF133520D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

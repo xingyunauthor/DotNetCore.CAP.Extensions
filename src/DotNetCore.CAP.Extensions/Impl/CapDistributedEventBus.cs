@@ -21,9 +21,9 @@ namespace DotNetCore.CAP.Extensions.Impl
                 : typeof(T).ToString();
 
             string callbackName = null;
-            if (typeof(T).HasImplementedRawGeneric(typeof(ICapCallback<>)))
+            if (typeof(T).HasImplementedRawGeneric(typeof(IEventCallback<>)))
             {
-                var capCallbackType = typeof(T).GetInterfaces().Single(a => a.HasImplementedRawGeneric(typeof(ICapCallback<>)));
+                var capCallbackType = typeof(T).GetInterfaces().Single(a => a.HasImplementedRawGeneric(typeof(IEventCallback<>)));
                 var argumentType = capCallbackType.GetGenericArguments()[0];
                 var callbackAttribute = argumentType.GetCustomAttribute<CapSubscribeAttribute>();
                 callbackName = callbackAttribute != null
