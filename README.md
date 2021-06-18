@@ -1,4 +1,5 @@
-# DotNetCore.CAP.Extensions 对 DotNetCore.CAP 做了扩展，使用传统的事件发布的写法，并且与 CAP 原来的写法相兼容
+# DotNetCore.CAP.Extensions 
+> DotNetCore.CAP.Extensions 对 DotNetCore.CAP 做了扩展，使用传统的事件发布的写法，并且与 CAP 原来的写法相兼容
 
 ### 配置
 
@@ -15,7 +16,7 @@ public void ConfigureServices(IServiceCollection services)
     });
 }
 ```
-####定义两个 Cto
+### 定义两个 Cto
 ```cs
 public class StockCountChangeCallbackCto
 {
@@ -32,7 +33,7 @@ public class StockCountChangeCto : IEventCallback<StockCountChangeCallbackCto>
 }
 ```
 
-####Controller 定义发布信息 Action
+### Controller 定义发布信息 Action
 ```cs
 [HttpGet]
 public async Task<string> Get()
@@ -48,7 +49,7 @@ public async Task<string> Get()
 }
 ```
 
-####最后定义 EventHandler
+### 最后定义 EventHandler
 ```cs
 public class StockCountChangeHandler : DistributedEventHandler<StockCountChangeCto, StockCountChangeCallbackCto>
 {
