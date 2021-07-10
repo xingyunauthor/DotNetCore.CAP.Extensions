@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DotNetCore.CAP.Extensions.Impl
@@ -13,7 +15,7 @@ namespace DotNetCore.CAP.Extensions.Impl
             _publisher = publisher;
         }
         
-        public async Task PublishAsync<T>(T data)
+        public async Task PublishAsync<T>(T data, CancellationToken cancellationToken = default)
         {
             var attribute = typeof(T).GetCustomAttribute(typeof(CapSubscribeAttribute));
             var name = attribute != null
@@ -31,7 +33,17 @@ namespace DotNetCore.CAP.Extensions.Impl
                     : argumentType.ToString();
             }
             
-            await _publisher.PublishAsync(name, data, callbackName);
+            await _publisher.PublishAsync(name, data, callbackName, cancellationToken);
+        }
+
+        public async Task PublishAsync<T>(T data, IDictionary<string, string> headers, CancellationToken cancellationToken = default)
+        {
+            var attribute = typeof(T).GetCustomAttribute(typeof(CapSubscribeAttribute));
+            var name = attribute != null
+                ? ((CapSubscribeAttribute) attribute).Name
+                : typeof(T).ToString();
+
+            await _publisher.PublishAsync(name, data, headers, cancellationToken);
         }
     }
 }
